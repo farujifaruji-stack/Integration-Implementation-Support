@@ -13,7 +13,7 @@ This document describes what happens from the moment a customer clicks **Pay** u
 5. `FlowStep` is updated to `StripePending` in the database.
 6. Stripe sends a webhook event with the payment status: successful or failed.
 7. `OrderStatus` is updated to `Paid` or `Payment Failed` in the database.
-8. `FlowStep` is updated to `Authed` or `AuthFailed` in the database.
+8. `FlowStep` is updated to `PaymentAttempt` in the database.
 
 ## Customer Message
 
