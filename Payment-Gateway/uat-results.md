@@ -3,7 +3,7 @@ Record the completed test results after you run the tests in test-plan.md, inclu
 
 
 | What to test | Expected result | Actual result (pass/fail) | Test date | Evidence |
-|---|---|---|
+|---|---|---|---|---|
 | Successful payment | Payment and order details are saved in the `Orders` and `OrderPayments` tables. | | | |
 | Successful payment | A confirmation message is displayed to the customer. | | | |
 | Successful payment | A receipt is sent to the customer’s email. | | | |
