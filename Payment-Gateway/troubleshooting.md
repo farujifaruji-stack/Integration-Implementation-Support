@@ -15,6 +15,6 @@ Failed Checkout Session creation
 | FlowStep | OrderStatus | PaymentStatus | Explanation |
 |---|---|---|---|
 | ClickPay | Error | null | The customer encountered an error before/during redirecting to Stripe |
-| 
+| - | 
 
 invalid keys, declined payments, missing webhooks, invalid webhook signatures, duplicate events, and database-update failures.
