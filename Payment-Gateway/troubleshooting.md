@@ -3,4 +3,8 @@ This documents how to investigate and resolve likely payment-integration problem
 
 | FlowStep | OrderStatus | PaymentStatus | Explanation |
 |---|---|---|---|
-| 
+| ClickPay | Error | null |  |
+| StripePending | null/Error | null/Error |  |
+| PaymentAttempt | Pending/Error | Due/Error |  |
+| PaymentAttempt | Paid | Void/Refund |  |
+| PaymentAttempt | PaymentFailed | Auth/Void/Refund |  |
