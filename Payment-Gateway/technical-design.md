@@ -68,7 +68,7 @@ The webhook updates the order as `Paid` or `Payment Failed`.
 
 > **Note:** This table documents the backend processing stages. Final payment-status updates occur after the Stripe webhook is received and processed.
 
-- **Order status:** `null`, `Pending`, `Paid`, `PaymentFailed`, `canceled`, `Error`, `Refunded`
+- **Order status:** `null`, `Pending`, `Paid`, `PaymentFailed`, `canceled`, `Error`, `Refunded`, `Committed`
 - **Payment status:** `null`, `Due`, `AuthChallenged`, `Auth`, `Failed`, `canceled`, `Error`, `Void`, `Refund`
 - There are defined final statuses that are not allowed to change.
 
