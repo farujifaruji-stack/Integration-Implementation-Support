@@ -1,1 +1,1 @@
-
+This documents how to investigate and resolve likely payment-integration problems, such as failed Checkout Session creation, invalid keys, declined payments, missing webhooks, invalid webhook signatures, duplicate events, and database-update failures.
