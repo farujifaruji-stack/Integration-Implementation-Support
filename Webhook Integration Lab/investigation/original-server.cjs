@@ -46,21 +46,7 @@ app.post(
     }
 
     // Converts the verified JSON payload back into an object.
-    let event;
-    try {
-      event = JSON.parse(payload);
-    } catch {
-      return res.status(400).json({ message: 'Invalid JSON payload.' });
-    }
-
-    // A valid signature authenticates bytes, not the event schema.
-    // Validate before looking up or changing deduplication state.
-    if (
-      !event || typeof event !== 'object' || Array.isArray(event) ||
-      typeof event.id !== 'string' || event.id.trim().length === 0
-    ) {
-      return res.status(400).json({ message: 'Event id must be a non-empty string.' });
-    }
+    const event = JSON.parse(payload);
 
 // Stops a repeated event from being processed twice.
 if (processedEventIds.has(event.id)) {

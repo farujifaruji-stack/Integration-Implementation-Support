@@ -1,0 +1,24 @@
+{"scenario":"missing IDs","first":{"statusCode":400,"body":{"message":"Event id must be a non-empty string."}},"second":{"statusCode":400,"body":{"message":"Event id must be a non-empty string."}}}
+✔ two different tickets without event IDs are both rejected, never acknowledged as duplicates (2.7991ms)
+✔ reject invalid event ID: null (0.8418ms)
+✔ reject invalid event ID: "" (0.7459ms)
+✔ reject invalid event ID: "   " (0.7557ms)
+✔ reject invalid event ID: 42 (1.5144ms)
+✔ reject invalid event ID: {} (0.7451ms)
+✔ reject invalid event ID: [] (0.7735ms)
+✔ reject invalid JSON or non-object envelope: {broken (0.7949ms)
+✔ reject invalid JSON or non-object envelope: null (0.7448ms)
+✔ reject invalid JSON or non-object envelope: [] (0.7438ms)
+✔ reject invalid JSON or non-object envelope: "text" (0.6732ms)
+✔ valid event is accepted and retry is acknowledged without processing twice (0.7395ms)
+✔ distinct valid IDs remain independent (0.6897ms)
+✔ invalid signature is rejected before JSON parsing (0.8234ms)
+✔ rejected event can be corrected and retried successfully (0.7254ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 114.9834

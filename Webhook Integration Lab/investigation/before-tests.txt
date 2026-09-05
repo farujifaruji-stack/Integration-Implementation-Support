@@ -1,0 +1,261 @@
+{"scenario":"missing IDs","first":{"statusCode":200,"body":{"received":true,"verified":true}},"second":{"statusCode":200,"body":{"received":true,"verified":true,"duplicate":true}}}
+✖ two different tickets without event IDs are both rejected, never acknowledged as duplicates (12.722ms)
+✖ reject invalid event ID: null (1.4493ms)
+✖ reject invalid event ID: "" (0.9674ms)
+✖ reject invalid event ID: "   " (0.7895ms)
+✖ reject invalid event ID: 42 (2.6826ms)
+✖ reject invalid event ID: {} (0.7688ms)
+✖ reject invalid event ID: [] (0.7923ms)
+✖ reject invalid JSON or non-object envelope: {broken (1.4083ms)
+✖ reject invalid JSON or non-object envelope: null (1.2272ms)
+✖ reject invalid JSON or non-object envelope: [] (1.0119ms)
+✖ reject invalid JSON or non-object envelope: "text" (0.8201ms)
+✔ valid event is accepted and retry is acknowledged without processing twice (0.8309ms)
+✔ distinct valid IDs remain independent (0.7389ms)
+✔ invalid signature is rejected before JSON parsing (0.8388ms)
+✖ rejected event can be corrected and retried successfully (0.9152ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 3
+ℹ fail 12
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 166.3322
+
+✖ failing tests:
+
+test at outputs\webhook-investigation\investigation\receiver.test.cjs:46:1
+✖ two different tickets without event IDs are both rejected, never acknowledged as duplicates (12.722ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:51:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at outputs\webhook-investigation\investigation\receiver.test.cjs:57:3
+✖ reject invalid event ID: null (1.4493ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:58:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at outputs\webhook-investigation\investigation\receiver.test.cjs:57:3
+✖ reject invalid event ID: "" (0.9674ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:58:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at outputs\webhook-investigation\investigation\receiver.test.cjs:57:3
+✖ reject invalid event ID: "   " (0.7895ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:58:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at outputs\webhook-investigation\investigation\receiver.test.cjs:57:3
+✖ reject invalid event ID: 42 (2.6826ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:58:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at outputs\webhook-investigation\investigation\receiver.test.cjs:57:3
+✖ reject invalid event ID: {} (0.7688ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:58:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at outputs\webhook-investigation\investigation\receiver.test.cjs:57:3
+✖ reject invalid event ID: [] (0.7923ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:58:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at outputs\webhook-investigation\investigation\receiver.test.cjs:62:3
+✖ reject invalid JSON or non-object envelope: {broken (1.4083ms)
+  SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+      at JSON.parse (<anonymous>)
+      at C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\original-server.cjs:49:24
+      at Object.send (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:37:7)
+      at TestContext.<anonymous> (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:63:29)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at outputs\webhook-investigation\investigation\receiver.test.cjs:62:3
+✖ reject invalid JSON or non-object envelope: null (1.2272ms)
+  TypeError: Cannot read properties of null (reading 'id')
+      at C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\original-server.cjs:52:33
+      at Object.send (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:37:7)
+      at TestContext.<anonymous> (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:63:29)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at outputs\webhook-investigation\investigation\receiver.test.cjs:62:3
+✖ reject invalid JSON or non-object envelope: [] (1.0119ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:63:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at outputs\webhook-investigation\investigation\receiver.test.cjs:62:3
+✖ reject invalid JSON or non-object envelope: "text" (0.8201ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:63:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at outputs\webhook-investigation\investigation\receiver.test.cjs:81:1
+✖ rejected event can be corrected and retried successfully (0.9152ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 400
+  
+      at TestContext.<anonymous> (C:\Users\faruja\Documents\Codex\2026-09-05\referenced-chatgpt-conversation-this-is-an\outputs\webhook-investigation\investigation\receiver.test.cjs:83:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
